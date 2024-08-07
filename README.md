@@ -55,14 +55,12 @@ Response:
 
 Example Request:
 
-curl -X 'POST' \
-  '<http://0.0.0.0:8000/add_batch/>' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "symbol": "AAPL",
-  "values": [150.0, 151.0, 152.0]
-}'
+```sh
+curl -X POST "http://0.0.0.0:8000/add_batch/" \
+-H "accept: application/json" \
+-H "Content-Type: application/json" \
+-d '{"symbol": "AAPL", "values": [150.0, 151.0, 152.0]}'
+```
 
 ### GET /stats/
 
@@ -83,9 +81,11 @@ Response:
 
 Example Request:
 
-curl -X 'GET' \
-  '<http://0.0.0.0:8000/stats/?symbol=AAPL&k=1>' \
-  -H 'accept: application/json'
+```sh
+curl -X GET "http://0.0.0.0:8000/stats/?symbol=AAPL&k=1" \
+-H "accept: application/json"
+
+```
 
 ## Running Tests
 
