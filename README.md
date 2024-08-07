@@ -16,7 +16,7 @@ This project implements a high-performance RESTful service capable of handling t
 
 1. Clone the repository:
 
-   `git clone <https://github.com/piotrekobi/backend_assignment.git>`
+   `git clone https://github.com/piotrekobi/backend_assignment.git`
 
    `cd backend_assignment`
 
