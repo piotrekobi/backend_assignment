@@ -28,7 +28,7 @@ This project implements a high-performance RESTful service capable of handling t
 
 3. Install dependencies:
 
-   `pip install -r requirements.tx`t`
+   `pip install -r requirements.txt`
 
 ## Running the Service
 
