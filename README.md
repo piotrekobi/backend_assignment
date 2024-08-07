@@ -36,7 +36,7 @@ This project implements a high-performance RESTful service capable of handling t
 
    `python -m app.main`
 
-   The server will be running at http://0.0.0.0:8000.
+   The server will be running at <http://0.0.0.0:8000>.
 
 ## API Endpoints
 
@@ -44,17 +44,19 @@ This project implements a high-performance RESTful service capable of handling t
 
 Purpose: Allows the bulk addition of consecutive trading data points for a specific symbol.
 
-Input: 
+Input:
+
 - symbol: String identifier for the financial instrument.
 - values: Array of floating-point numbers representing sequential trading prices.
 
-Response: 
+Response:
+
 - Confirmation of the batch data addition.
 
 Example Request:
 
 curl -X 'POST' \
-  'http://0.0.0.0:8000/add_batch/' \
+  '<http://0.0.0.0:8000/add_batch/>' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -67,10 +69,12 @@ curl -X 'POST' \
 Purpose: Provides rapid statistical analyses of recent trading data for specified symbols.
 
 Input:
+
 - symbol: The financial instrument's identifier.
 - k: An integer from 1 to 8, specifying the number of last 1e{k} data points to analyze.
 
 Response:
+
 - min: Minimum price in the last 1e{k} points.
 - max: Maximum price in the last 1e{k} points.
 - last: Most recent trading price.
@@ -80,7 +84,7 @@ Response:
 Example Request:
 
 curl -X 'GET' \
-  'http://0.0.0.0:8000/stats/?symbol=AAPL&k=1' \
+  '<http://0.0.0.0:8000/stats/?symbol=AAPL&k=1>' \
   -H 'accept: application/json'
 
 ## Running Tests
